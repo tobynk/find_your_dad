@@ -7,6 +7,7 @@ public class playermovemnet : MonoBehaviour
 {
     private float speed = 5.0f;
     private float jumpSpeed = 5f;
+    private float dashSpeed = 20f;
     private float horizontalInput;
     private float verticalInput; 
     private float fowardinput;
@@ -25,6 +26,10 @@ public class playermovemnet : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(shootingE, transform.position,shootingE.transform.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            transform.Translate(UnityEngine.Vector3.forward * Time.deltaTime * fowardinput*dashSpeed );
         }
 
     }
