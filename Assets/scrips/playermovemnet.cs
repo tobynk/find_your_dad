@@ -29,7 +29,6 @@ public class playermovemnet : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            transform.Translate(UnityEngine.Vector3.forward * Time.deltaTime * fowardinput*dashSpeed );
         }
 
     }
