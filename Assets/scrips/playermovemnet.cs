@@ -20,9 +20,8 @@ public class playermovemnet : MonoBehaviour
         fowardinput = Input.GetAxis("Vertical");
         //making the car go
         transform.Translate(UnityEngine.Vector3.forward * Time.deltaTime * fowardinput*speed);
-
         transform.Translate(UnityEngine.Vector3.right * Time.deltaTime * horizontalInput*speed);
-        transform.Translate(UnityEngine.Vector3.up * verticalInput );
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(shootingE, transform.position,shootingE.transform.rotation);
