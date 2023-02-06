@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class playermovemnet : MonoBehaviour
 {
-    private float speed = 5.0f;
+    private float speed = 10.0f;
     private float jumpSpeed = 5f;
     private float dashSpeed = 20f;
     private float horizontalInput;
