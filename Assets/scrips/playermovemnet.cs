@@ -24,6 +24,7 @@ public class playermovemnet : MonoBehaviour
     private float tragetAngle;
     private float angle;
     public bool running=true;
+    
 
     // Update is called once per frame
     void Start()
@@ -53,7 +54,7 @@ public class playermovemnet : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(shootingE, transform.position+ Offset,shootingE.transform.rotation);
+            Instantiate(shootingE, transform.position+ Offset,transform.rotation);
         }
     
         
