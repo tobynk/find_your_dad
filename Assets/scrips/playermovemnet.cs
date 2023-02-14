@@ -24,7 +24,9 @@ public class playermovemnet : MonoBehaviour
     private float tragetAngle;
     private float angle;
     public bool running=true;
-    
+    public float dashspeed = 10;
+    public float dashTime = 5;
+
 
     // Update is called once per frame
     void Start()
@@ -51,7 +53,12 @@ public class playermovemnet : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f,angle,0f);
             Vector3 movedir =Quaternion.Euler(0f, tragetAngle, 0f)*Vector3.forward;
             controller.Move(movedir.normalized*speed*Time.deltaTime);
+            if (Input.GetMouseButtonDown(0))
+            {
+                controller.Move(dashspeed * Time.deltaTime * movedir);
+            }
         }
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(shootingE, transform.position+ Offset,transform.rotation);
@@ -65,6 +72,8 @@ public class playermovemnet : MonoBehaviour
         if (collision.gameObject.CompareTag("ground")){
             isOnGround=true;
         }
-    } 
-         
+    }
+   
+
+
 }
