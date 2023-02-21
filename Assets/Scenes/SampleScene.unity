@@ -326,51 +326,6 @@ Transform:
   m_Father: {fileID: 960393767}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &341475438
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 341475439}
-  - component: {fileID: 341475440}
-  m_Layer: 0
-  m_Name: colllider
-  m_TagString: playerattacker
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &341475439
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341475438}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 191257139}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &341475440
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341475438}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 5, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &478346829
 GameObject:
   m_ObjectHideFlags: 3
@@ -1485,7 +1440,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789603239}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
@@ -1631,6 +1586,10 @@ PrefabInstance:
     - target: {fileID: 1448958898596735949, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
       propertyPath: m_Center.y
       value: -0.042535007
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448958898596735949, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
       propertyPath: m_RootOrder
@@ -1958,6 +1917,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9210984547501119891, guid: a821f1f9837c7430f953920d30dfb6a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9210984547501119918, guid: a821f1f9837c7430f953920d30dfb6a7, type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9210984547501119919, guid: a821f1f9837c7430f953920d30dfb6a7, type: 3}

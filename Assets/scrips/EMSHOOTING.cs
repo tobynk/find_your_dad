@@ -22,7 +22,7 @@ public class EMSHOOTING : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("playeracctacker"))
+        if (collision.gameObject.CompareTag("playerattacker"))
         {
             near = true;
         }
