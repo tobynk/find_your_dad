@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 1448958898596735950}
   - component: {fileID: 1448958898596735953}
   - component: {fileID: 1448958898596735952}
-  - component: {fileID: 1448958898596735955}
   - component: {fileID: 1448958898596735954}
   - component: {fileID: 1448958898596735951}
   - component: {fileID: 1448958898596735948}
   - component: {fileID: 1448958898596735949}
+  - component: {fileID: 191257147}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,20 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1448958898596735955
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448958898596735957}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1448958898596735954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -116,7 +102,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1448958898596735951
 MonoBehaviour:
@@ -130,7 +116,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64fa231b25dd4dc68ae0874433a95a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
   shootingE: {fileID: 221724794820407334, guid: dbcacd7cacad54304a10d69620cbb61a, type: 3}
+  controller: {fileID: 191257147}
+  turnsmoothtime: 0.1
+  turnsmoothvelocity: 10
+  cam: {fileID: 0}
+  jumpForce: 10
+  gravityModifier: 1
+  isOnGround: 1
+  running: 1
+  dashspeed: 10
+  dashTime: 5
 --- !u!64 &1448958898596735948
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -157,4 +154,22 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &191257147
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448958898596735957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
