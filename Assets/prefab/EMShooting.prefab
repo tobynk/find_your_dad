@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 277437291595789251}
   - component: {fileID: 7115367991231761593}
   - component: {fileID: 8477868143921633332}
-  - component: {fileID: -4749841281747109416}
+  - component: {fileID: 8006168996143293499}
   m_Layer: 0
   m_Name: EMShooting
-  m_TagString: Untagged
+  m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4749841281747109416
+--- !u!114 &8006168996143293499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,8 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515648206723422247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb9e2179e2c90403a9706ee71f97e8ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f2fb9ee3a6dc401fb17943310907005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 40
+  speed: 10
