@@ -8,6 +8,7 @@ public class takehealth : MonoBehaviour
     public float maxhealth=1000;
     public bool playerIsAlive = true;
     
+    
     // Start is called before the first frame update
    void Start()
     {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EMSHOOTING : MonoBehaviour
 {
     public GameObject projectilePrefab;  // the object to fire
@@ -12,14 +13,13 @@ public class EMSHOOTING : MonoBehaviour
     private float lastFireTime;          // time when enemy last fired
     public float timer=0;
     public float firingrate=5; 
-    private takehealth health;
     public float distanceToPlayer;
+    public int playercount;
 
     void Start()
     {
         // find player object by tag
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        health = GameObject.Find("Player").GetComponent<takehealth>();
     }
 
     void Update()
@@ -27,14 +27,15 @@ public class EMSHOOTING : MonoBehaviour
         // calculate distance to player
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         timer += Time.deltaTime;
+        
 
         // check if player is close enough and enough time has elapsed since last shot
-        if (health.playerIsAlive=true&&distanceToPlayer<detectionRange&&timer>firingrate)
+        if (distanceToPlayer < detectionRange && timer > firingrate)
         {
             // fire projectile and update lastFireTime
-            Debug.Log("the player is near"+distanceToPlayer);
+            Debug.Log("the player is near" + distanceToPlayer);
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            timer=0;
+            timer = 0;
         }
     }
 }

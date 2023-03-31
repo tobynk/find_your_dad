@@ -115,9 +115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6368d5233d4e849ea9a58f5d9b9b03cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1515648206723422247, guid: fb8c378360e9e4b3f8d49ea25f23b27f, type: 3}
+  projectilePrefab: {fileID: 2875088127937834428, guid: fb8c378360e9e4b3f8d49ea25f23b27f, type: 3}
   fireInterval: 20
   detectionRange: 30
+  timer: 0
+  firingrate: 5
+  distanceToPlayer: 0
 --- !u!136 &2404727580448389216
 CapsuleCollider:
   m_ObjectHideFlags: 0
