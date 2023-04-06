@@ -14,19 +14,11 @@ public class enemyshootingmovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
         Vector3 direction = player.position - transform.position;
         direction.Normalize();
-        float distance = direction.magnitude;
-        if (distance <= detectionRange)
-        {
-           transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        }
-        else if (distance >= detectionRange)
-        {
-            transform.position += direction * speed * Time.deltaTime;
-        }
+        transform.position += direction * speed * Time.deltaTime;
         if (Vector3.Distance(transform.position, player.position) < 0.5f)
         {
             // destroy the object if it has collided with the player

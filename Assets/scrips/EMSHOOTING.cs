@@ -30,7 +30,7 @@ public class EMSHOOTING : MonoBehaviour
         
 
         // check if player is close enough and enough time has elapsed since last shot
-        if (distanceToPlayer < detectionRange && timer > firingrate)
+        if ( timer > firingrate)
         {
             // fire projectile and update lastFireTime
             Debug.Log("the player is near" + distanceToPlayer);

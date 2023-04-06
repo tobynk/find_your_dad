@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class takehealth : MonoBehaviour
 {
-    public float health;
-    public float maxhealth=1000;
+    public int health;
+    public int maxhealth=1000;
     public bool playerIsAlive = true;
+    public healthbar healthBar;
     
     
     // Start is called before the first frame update
    void Start()
     {
         health = maxhealth; // initialize health to maximum value
+        healthBar.SetMaxHealth(maxhealth);
     }
 
     void OnTriggerEnter(Collider other)
@@ -26,6 +28,7 @@ public class takehealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         health -= damage; // subtract damage from current health
+        healthBar.SetHealth(health);
         if (health <= 0)
         {
             Die(); // if health reaches zero or below, call Die() function
