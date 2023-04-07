@@ -6,11 +6,13 @@ public class enemyshootingmovement : MonoBehaviour
 {
     public float speed = 10f;
     private Transform player;
-     public float detectionRange = 1f;
+    public float detectionRange = 1f;
+    public int takingshit;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        Destroy(gameObject, 5.0f);
     }
 
     // Update is called once per frame

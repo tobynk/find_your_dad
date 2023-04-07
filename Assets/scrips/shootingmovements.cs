@@ -4,20 +4,48 @@ using UnityEngine;
 
 public class shootingmovements : MonoBehaviour
 {
-    public GameObject player;
-    
-    public float speed = 40.0f;
-    
+    public float speed = 10f;
+    private Transform enemy;
+     public float detectionRange = 1f;
+     private Transform target; // Transform of the closest enemy
+    private float currentLifetime; // Current lifetime of the bullet
+    public LayerMask enemyLayer; // LayerMask for enemies
+    public float maxDistance = 100.0f; // Maximum distance for seeking enemies
+
     // Start is called before the first frame update
     void Start()
     {
-         Destroy(gameObject, 1.0f);
+        
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        FindClosestEnemy();
+        Vector3 direction = enemy.position - transform.position;
+        direction.Normalize();
+        transform.position += direction * speed * Time.deltaTime;
+        if (Vector3.Distance(transform.position, enemy.position) < 0.5f)
+        {
+            // destroy the object if it has collided with the player
+            Destroy(gameObject);
+        }
         
+        
+    }
+    void FindClosestEnemy()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, maxDistance, enemyLayer);
+        float closestDistance = Mathf.Infinity;
+
+        foreach (Collider collider in colliders)
+        {
+            float distance = Vector3.Distance(transform.position, collider.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                enemy = collider.transform;
+            }
+        }
     }
 }

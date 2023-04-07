@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: -5675498777219163736}
   - component: {fileID: 2404727580448389216}
   - component: {fileID: 8419214069290984062}
-  m_Layer: 0
+  - component: {fileID: 910332446}
+  m_Layer: 6
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,8 +120,13 @@ MonoBehaviour:
   fireInterval: 20
   detectionRange: 30
   timer: 0
-  firingrate: 5
+  firingrate: 1
   distanceToPlayer: 0
+  playercount: 0
+  maxDistance: 100
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!136 &2404727580448389216
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -155,3 +161,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &910332446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88d57fb661d2334a8e9912745db74f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxhealth: 100
+  playerIsAlive: 1
