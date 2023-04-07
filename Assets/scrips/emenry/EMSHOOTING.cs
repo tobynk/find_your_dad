@@ -33,7 +33,6 @@ public class EMSHOOTING : MonoBehaviour
         if ( timer > firingrate&&player != null)
         {
             // fire projectile and update lastFireTime
-            Debug.Log("the player is near" + distanceToPlayer);
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             timer = 0;
         }

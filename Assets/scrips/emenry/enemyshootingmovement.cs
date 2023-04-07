@@ -8,16 +8,19 @@ public class enemyshootingmovement : MonoBehaviour
     private Transform player;
     public float detectionRange = 1f;
     public int takingshit;
+    public float timer=0;
+    public float detoryshit=3;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        Destroy(gameObject, 5.0f);
+        Destroy(gameObject,detoryshit);
     }
 
     // Update is called once per frame
    void Update()
     {
+        timer += Time.deltaTime;
         Vector3 direction = player.position - transform.position;
         direction.Normalize();
         transform.position += direction * speed * Time.deltaTime;
@@ -26,7 +29,6 @@ public class enemyshootingmovement : MonoBehaviour
             // destroy the object if it has collided with the player
             Destroy(gameObject);
         }
-        
         
     }
 }

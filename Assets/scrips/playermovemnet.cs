@@ -53,10 +53,7 @@ public class playermovemnet : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f,angle,0f);
             Vector3 movedir =Quaternion.Euler(0f, tragetAngle, 0f)*Vector3.forward;
             controller.Move(movedir.normalized*speed*Time.deltaTime);
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                controller.Move(dashspeed * Time.deltaTime * movedir);
-            }
+            
         }
         
         if (Input.GetKeyDown(KeyCode.E))
