@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
-    public GameObject EnemyPrefab;
     private float spawnRange =9.0f;
     public int enenmycount;
     public int wavenumber=1;
+    public List<GameObject> EnemyPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,8 @@ public class spawner : MonoBehaviour
     {
         for(int i=0; i < enemiestospawn; i++)
         {
-            Instantiate(EnemyPrefab,GenerateSpawnPosition(),EnemyPrefab.transform.rotation);
+            int index = Random.Range(0,EnemyPrefab.Count);
+            Instantiate(EnemyPrefab[index],GenerateSpawnPosition(), Quaternion.identity);
         }
     }
 }

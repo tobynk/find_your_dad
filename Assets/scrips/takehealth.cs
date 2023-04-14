@@ -19,14 +19,15 @@ public class takehealth : MonoBehaviour
         health = maxhealth; // initialize health to maximum value
         healthBar.SetMaxHealth(maxhealth);
         Updatehealth();
-        taking=GameObject.Find("EMShooting").GetComponent<enemyshootingmovement>();
     }
     
     void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "bullets") // check if collided object has the "Enemy" tag
+    {   
+        enemyshootingmovement damage = other.GetComponent<enemyshootingmovement>();
+        if (other.gameObject.tag == "bullets" ) // check if collided object has the "bullets" tag and the enemyshootingmovement component
         {
-            TakeDamage(taking.takingshit); // reduce health by 10 points
+            TakeDamage(damage.takingshit); // reduce health by the bullet's damage
+            Debug.Log(damage.takingshit);
         }
     }
 

@@ -7,11 +7,13 @@ public class enermyhealth : MonoBehaviour
     public int health;
     public int maxhealth=100;
     public bool playerIsAlive = true;
+    public healthbarem healthbarem;
 
     // Start is called before the first frame update
    void Start()
     {
         health = maxhealth; // initialize health to maximum value
+        healthbarem.SetMaxHealth(maxhealth);
         
     }
     
@@ -21,6 +23,7 @@ public class enermyhealth : MonoBehaviour
         {
             TakeDamage(10); // reduce health by 10 points
             Debug.Log("fuck u");
+            healthbarem.SetHealth(health);
         }
     }
 

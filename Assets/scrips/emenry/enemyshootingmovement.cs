@@ -24,11 +24,11 @@ public class enemyshootingmovement : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         direction.Normalize();
         transform.position += direction * speed * Time.deltaTime;
-        if (Vector3.Distance(transform.position, player.position) < 0.5f)
-        {
-            // destroy the object if it has collided with the player
-            Destroy(gameObject);
-        }
+        // if (Vector3.Distance(transform.position, player.position) < 0.5f)
+        // {
+        //     // destroy the object if it has collided with the player
+        //     Destroy(gameObject);
+        // }
         
     }
 }

@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 8419214069290984062}
   - component: {fileID: 910332446}
   m_Layer: 6
-  m_Name: Enemies
+  m_Name: Enemies2
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16f10977651b54a4eb5e82d2ed3063bf, type: 2}
+  - {fileID: 2100000, guid: eba5e09ec42ff4859ab66a4c314553ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -294,11 +294,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6368d5233d4e849ea9a58f5d9b9b03cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2875088127937834428, guid: fb8c378360e9e4b3f8d49ea25f23b27f, type: 3}
+  projectilePrefab: {fileID: 2875088127937834428, guid: f5ab252e7509d42a8a6fedba78608c0c, type: 3}
   fireInterval: 20
   detectionRange: 30
   timer: 0
-  firingrate: 4
+  firingrate: 10
   distanceToPlayer: 0
   playercount: 0
 --- !u!136 &2404727580448389216

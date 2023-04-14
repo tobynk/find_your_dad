@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class healthbarem : MonoBehaviour
 {
     public Slider emslider;
-    public healthbar healthBar;
 
     public void SetMaxHealth(int emmaxHealth)
     {
