@@ -11,7 +11,6 @@ public class playermovemnet : MonoBehaviour
     private float horizontalInput;
     private float verticalInput; 
     private float fowardinput;
-    public GameObject shootingE;
     public CharacterController controller;
     public float turnsmoothtime=0.1f;
     public float turnsmoothvelocity;
@@ -20,12 +19,8 @@ public class playermovemnet : MonoBehaviour
     public float jumpForce=10;
     public float gravityModifier;
     public bool isOnGround=true;
-    private Vector3 Offset = new Vector3(0, 0, 1);
     private float tragetAngle;
     private float angle;
-    public bool running=true;
-    public float dashspeed = 10;
-    public float dashTime = 5;
 
 
     // Update is called once per frame
@@ -54,11 +49,6 @@ public class playermovemnet : MonoBehaviour
             Vector3 movedir =Quaternion.Euler(0f, tragetAngle, 0f)*Vector3.forward;
             controller.Move(movedir.normalized*speed*Time.deltaTime);
             
-        }
-        
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Instantiate(shootingE, transform.position+ Offset,transform.rotation);
         }
     
         
