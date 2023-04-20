@@ -112,6 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   detectionRange: 1
-  takingshit: 300
+  damage: 30
   timer: 0
   detoryshit: 3

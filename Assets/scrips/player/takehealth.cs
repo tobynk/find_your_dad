@@ -26,8 +26,8 @@ public class takehealth : MonoBehaviour
         enemyshootingmovement damage = other.GetComponent<enemyshootingmovement>();
         if (other.gameObject.tag == "bullets" ) // check if collided object has the "bullets" tag and the enemyshootingmovement component
         {
-            TakeDamage(damage.takingshit); // reduce health by the bullet's damage
-            Debug.Log(damage.takingshit);
+            TakeDamage(damage.damage); // reduce health by the bullet's damage
+            Debug.Log(damage.damage);
         }
     }
 

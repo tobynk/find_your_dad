@@ -7,7 +7,7 @@ public class enemyshootingmovement : MonoBehaviour
     public float speed = 10f;
     private Transform player;
     public float detectionRange = 1f;
-    public int takingshit;
+    public int damage;
     public float timer=0;
     public float detoryshit=3;
     // Start is called before the first frame update
