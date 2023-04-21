@@ -26,6 +26,7 @@ public class playermovemnet : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         playerRb= GetComponent<Rigidbody>();
         Physics.gravity*=gravityModifier;
     }
