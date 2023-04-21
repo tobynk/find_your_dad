@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class playershooting : MonoBehaviour
 {
-    private Vector3 Offset = new Vector3(0, 0, 1);
     public GameObject shootingE;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,8 @@ public class playershooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(shootingE, transform.position+ Offset,transform.rotation);
+            var offset = new Vector3(Mathf.Cos(transform.eulerAngles.y), 0.0f, Mathf.Sin(transform.eulerAngles.y));
+            Instantiate(shootingE, transform.position+ offset,transform.rotation);
         }
         
     }
