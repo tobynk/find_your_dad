@@ -189,12 +189,12 @@ GameObject:
   - component: {fileID: 5015204539905829089}
   - component: {fileID: 5015204539905829094}
   - component: {fileID: 1733457310}
-  - component: {fileID: -5675498777219163736}
   - component: {fileID: 2404727580448389216}
   - component: {fileID: 8419214069290984062}
   - component: {fileID: 910332446}
+  - component: {fileID: 5254329181309008195}
   m_Layer: 6
-  m_Name: Enemies2
+  m_Name: melee
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eba5e09ec42ff4859ab66a4c314553ea, type: 2}
+  - {fileID: 2100000, guid: a67f4702f38ed46c29c909da5c733980, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -280,27 +280,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 16
+  m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &-5675498777219163736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5015204539905829092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6368d5233d4e849ea9a58f5d9b9b03cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2875088127937834428, guid: f5ab252e7509d42a8a6fedba78608c0c, type: 3}
-  fireInterval: 20
-  detectionRange: 30
-  timer: 0
-  firingrate: 10
-  distanceToPlayer: 0
-  playercount: 0
 --- !u!136 &2404727580448389216
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -351,6 +332,22 @@ MonoBehaviour:
   maxhealth: 100
   playerIsAlive: 1
   healthbarem: {fileID: 44610049007662567}
+--- !u!114 &5254329181309008195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5ee445cb4864428b76e4451fcacda2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+  movementSpeed: 5
+  stoppingDistance: 2
+  damage: 100
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0

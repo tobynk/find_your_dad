@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class shootingmovements : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 3f;
     private Transform enemy;
     public float detectionRange = 1f;
     private Transform target; // Transform of the closest enemy
@@ -12,6 +12,7 @@ public class shootingmovements : MonoBehaviour
     public LayerMask enemyLayer; // LayerMask for enemies
     public float maxDistance = 100.0f; // Maximum distance for seeking enemies
     public float straightBulletDistance = 20.0f; // Distance threshold for straight bullet
+    public float destroyTime = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class shootingmovements : MonoBehaviour
         {
             // If the enemy is too far away, shoot in a straight line
             transform.position += transform.forward * speed * Time.deltaTime;
+            Invoke("DestroyGameObject", destroyTime);
         }
         else
         {
@@ -58,5 +60,9 @@ public class shootingmovements : MonoBehaviour
                 enemy = collider.transform;
             }
         }
+    }
+    void DestroyGameObject()
+    {
+        Destroy(gameObject);
     }
 }

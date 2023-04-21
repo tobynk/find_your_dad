@@ -285,6 +285,7 @@ MonoBehaviour:
   exp: 0
   staringexp: 500
   requiredxp: 0
+  leveltext: {fileID: 1620838671}
 --- !u!1 &199320632
 GameObject:
   m_ObjectHideFlags: 3
@@ -354,7 +355,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199320632}
-  m_LocalRotation: {x: 0.16526799, y: -0.000000018972782, z: 0.0000000031793124, w: 0.98624873}
+  m_LocalRotation: {x: 0.16526797, y: 0.000000018972782, z: -0.0000000031793121, w: 0.98624873}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -627,7 +628,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560501953}
-  m_LocalRotation: {x: 0.11924897, y: -0.0000000344331, z: 0.000000004135622, w: 0.99286443}
+  m_LocalRotation: {x: 0.11924897, y: 0.0000000344331, z: -0.000000004135622, w: 0.99286443}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -972,7 +973,7 @@ MonoBehaviour:
     m_Radius: 2.9
   - m_Height: 2
     m_Radius: 5.8
-  - m_Height: 1
+  - m_Height: -0.66
     m_Radius: 3.3
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
@@ -987,7 +988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960393765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.043, z: -5.8}
+  m_LocalPosition: {x: 0, y: 3, z: -5.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1220,8 +1221,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -270.7096, y: -174.25}
+  m_SizeDelta: {x: 41.417, y: 20.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620838671
 MonoBehaviour:
@@ -1243,7 +1244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: lv.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1270,8 +1271,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1389,7 +1390,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706148289}
-  m_LocalRotation: {x: 0.14224707, y: 1e-45, z: -0, w: 0.9898312}
+  m_LocalRotation: {x: 0.14224708, y: -4.4889316e-25, z: 6.450973e-26, w: 0.9898312}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1475,8 +1476,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720217049}
-  m_LocalRotation: {x: 0.14224705, y: 0, z: 0, w: 0.98983127}
-  m_LocalPosition: {x: 0, y: 3.043, z: -5.8}
+  m_LocalRotation: {x: 0.14224705, y: 0, z: 0, w: 0.98983115}
+  m_LocalPosition: {x: 0, y: 3, z: -5.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2118,7 +2119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.043
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2163,6 +2164,10 @@ PrefabInstance:
     - target: {fileID: 1448958898596735951, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
       propertyPath: turnsmoothvelocity
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448958898596735954, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+      propertyPath: m_Constraints
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 1448958898596735957, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
       propertyPath: m_Name

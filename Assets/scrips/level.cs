@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class level : MonoBehaviour
 {
@@ -10,11 +11,13 @@ public class level : MonoBehaviour
     public int exp=0;
     public int staringexp=500;
     public int requiredxp;
+    public TextMeshProUGUI leveltext;
     // Start is called before the first frame update
     void Start()
     {
         levels=minlevel;
         requiredxp=staringexp*levels;
+        Updatlevl();
         
     }
 
@@ -39,10 +42,16 @@ public class level : MonoBehaviour
     void gainexp(int amount)
     {
         exp +=amount;
+        Updatlevl();
     }
 
     void setexp(int level)
     {
         requiredxp=staringexp*level;
+    }
+
+    public void Updatlevl()
+    {
+        leveltext.text="lv."+levels;
     }
 }

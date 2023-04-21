@@ -34,24 +34,20 @@ public class playermovemnet : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-        //transform.Translate(UnityEngine.Vector3.forward * Time.deltaTime * fowardinput*speed);
-        //transform.Translate(UnityEngine.Vector3.right * Time.deltaTime * horizontalInput*speed);
-        if (Input.GetKeyDown(KeyCode.Space)&& isOnGround)
-        {
-            playerRb.AddForce(Vector3.up*jumpForce, ForceMode.Impulse);
-            isOnGround=false;
-        }
-        if(direction.magnitude >=0.1f)
-        {
-            float tragetAngle = Mathf.Atan2(direction.x,direction.z)*Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle=Mathf.SmoothDampAngle(transform.eulerAngles.y, tragetAngle, ref turnsmoothvelocity, turnsmoothtime);
-            transform.rotation = Quaternion.Euler(0f,angle,0f);
-            Vector3 movedir =Quaternion.Euler(0f, tragetAngle, 0f)*Vector3.forward;
-            controller.Move(movedir.normalized*speed*Time.deltaTime);
-            
-        }
-    
         
+        if (direction.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnsmoothvelocity, turnsmoothtime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+        }
+        else
+        {
+            // If there is no input, don't move the character
+            controller.Move(Vector3.zero);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

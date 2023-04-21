@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1448958898596735952}
   - component: {fileID: 1448958898596735954}
   - component: {fileID: 1448958898596735951}
-  - component: {fileID: 1448958898596735948}
   - component: {fileID: 1448958898596735949}
   - component: {fileID: 191257147}
   m_Layer: 0
@@ -117,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  shootingE: {fileID: 221724794820407334, guid: dbcacd7cacad54304a10d69620cbb61a, type: 3}
   controller: {fileID: 191257147}
   turnsmoothtime: 0.1
   turnsmoothvelocity: 10
@@ -125,23 +123,6 @@ MonoBehaviour:
   jumpForce: 10
   gravityModifier: 1
   isOnGround: 1
-  running: 1
-  dashspeed: 10
-  dashTime: 5
---- !u!64 &1448958898596735948
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448958898596735957}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &1448958898596735949
 BoxCollider:
   m_ObjectHideFlags: 0
