@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class enemymelee : MonoBehaviour
 {
-    public Transform playerTransform;   // Reference to the player's transform
-    public float speed = 5f;    // Speed at which the enemy moves towards the player
+    public float movementSpeed = 5f;    // Speed at which the enemy moves towards the player
     public float stoppingDistance = 0f; // Distance at which the enemy stops moving towards the player
     public int damage=100;
-    private Transform player;
-    void Start()
-    {
-        // find player object by tag
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+    public float rechargeTime = 1.0f;
+
+    private takehealth playerHealth;
+    private Transform playerTransform;   // Reference to the player's transform
+    private float distanceThreshold = 2.0f;
+    private bool canAttack = true;
+
+    void Start() {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        playerTransform = player.GetComponent<Transform>();
+        playerHealth = player.GetComponent<takehealth>();
     }
-    void Update() {
+
+    private void Update() {
         // Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Debug.Log(distanceToPlayer);
@@ -25,6 +31,17 @@ public class enemymelee : MonoBehaviour
             direction.Normalize();
             transform.position += direction * speed * Time.deltaTime;
         }
+
+        if (canAttack && distanceToPlayer <= distanceThreshold) {
+            canAttack = false;
+            StartCoroutine(ResetAttack());
+            playerHealth.TakeDamage(damage);
+        }
+    }
+    
+    IEnumerator ResetAttack() {
+        yield return new WaitForSeconds(rechargeTime);
+        canAttack = true;
     }
 }
 
