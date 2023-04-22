@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class takehealth : MonoBehaviour
 {
@@ -9,7 +8,6 @@ public class takehealth : MonoBehaviour
     public int maxhealth=1000;
     public bool playerIsAlive = true;
     public healthbar healthBar;
-    public TextMeshProUGUI healthtext;
     private enemyshootingmovement taking;
     
     
@@ -18,7 +16,6 @@ public class takehealth : MonoBehaviour
     {
         health = maxhealth; // initialize health to maximum value
         healthBar.SetMaxHealth(maxhealth);
-        Updatehealth();
     }
     
     void OnTriggerEnter(Collider other)
@@ -35,7 +32,6 @@ public class takehealth : MonoBehaviour
     {
         health -= damage; // subtract damage from current health
         healthBar.SetHealth(health);
-        Updatehealth();
         if (health <= 0)
         {
             Die(); // if health reaches zero or below, call Die() function
@@ -46,10 +42,6 @@ public class takehealth : MonoBehaviour
     {
         Destroy(gameObject);
         playerIsAlive=false;
-    }
-    public void Updatehealth()
-    {
-        healthtext.text=health+"/"+maxhealth;
     }
 }
 

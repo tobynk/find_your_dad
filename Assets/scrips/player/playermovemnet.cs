@@ -11,7 +11,6 @@ public class playermovemnet : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     private float fowardinput;
-    public CharacterController controller;
     public float turnsmoothvelocity;
     public Transform cam;
     private Rigidbody playerRb;
@@ -33,14 +32,15 @@ public class playermovemnet : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector3 direction = new Vector3(horizontal, 0.0f, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnsmoothvelocity, Time.deltaTime);
+            float verticalAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, verticalAngle, ref turnsmoothvelocity, Time.deltaTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
         }
     }
 
