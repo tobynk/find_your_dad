@@ -344,10 +344,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5ee445cb4864428b76e4451fcacda2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
   movementSpeed: 5
   stoppingDistance: 2
   damage: 100
+  rechargeTime: 1
+  speed: 5
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0
