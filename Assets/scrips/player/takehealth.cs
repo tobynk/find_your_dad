@@ -31,7 +31,7 @@ public class takehealth : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage; // subtract damage from current health
         healthBar.SetHealth(health);

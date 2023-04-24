@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2875088127937834430}
   - component: {fileID: 2875088127937834431}
   m_Layer: 0
-  m_Name: normal
+  m_Name: normal(boss!)
   m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,6 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   detectionRange: 1
-  damage: 10
+  damage: 100
   timer: 0
   detoryshit: 3
