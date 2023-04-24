@@ -10,7 +10,7 @@ public class EMSHOOTING : MonoBehaviour
     private Transform player;            // reference to player's transform
     private float lastFireTime;          // time when enemy last fired
     public float timer = 0;
-    public int firingrate;
+    public float firingrate = 5;
     public float distanceToPlayer;
     public int playercount;
 
@@ -23,17 +23,18 @@ public class EMSHOOTING : MonoBehaviour
 
     void Update()
     {
-        // calculate distance to player
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        timer += Time.deltaTime;
-
-        // check if player is close enough and enough time has elapsed since last shot
-        if (timer > firingrate && player != null)
+        if (Vector3.Distance(player.transform.position, transform.position) <= detectionRange)
         {
-            // fire projectile and update lastFireTime
-            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            timer = 0;
-            firingrate = Random.Range(1, 11); // set new firing rate
+            timer += Time.deltaTime;
+
+            // check if player is close enough and enough time has elapsed since last shot
+            if (timer > firingrate)
+            {
+                // fire projectile and update lastFireTime
+                Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+                timer = 0;
+            }
+
         }
     }
 }

@@ -348,6 +348,7 @@ MonoBehaviour:
   speed: 5
   stoppingDistance: 1
   damage: 100
+  rechargeTime: 1
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0
