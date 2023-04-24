@@ -50,13 +50,5 @@ public class takehealth : MonoBehaviour
         Destroy(gameObject);
         playerIsAlive = false;
     }
-<<<<<<< HEAD
-=======
-
-    public void Updatehealth()
-    {
-        healthtext.text = health + "/" + maxhealth;
-    }
->>>>>>> merge_chamber
 }
 
