@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class EMSHOOTING : MonoBehaviour
 {
     public GameObject projectilePrefab;  // the object to fire
@@ -19,6 +18,7 @@ public class EMSHOOTING : MonoBehaviour
     {
         // find player object by tag
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        firingrate = Random.Range(1, 11);
     }
 
     void Update()
@@ -37,5 +37,4 @@ public class EMSHOOTING : MonoBehaviour
 
         }
     }
-
 }

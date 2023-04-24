@@ -1,30 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class takehealth : MonoBehaviour
 {
     public int health;
-    public int maxhealth=1000;
+    public int maxhealth = 1000;
     public bool playerIsAlive = true;
     public healthbar healthBar;
-    private enemyshootingmovement taking;
-    
-    
+    public TextMeshProUGUI healthtext;
+
     // Start is called before the first frame update
-   void Start()
+    void Start()
     {
         health = maxhealth; // initialize health to maximum value
         healthBar.SetMaxHealth(maxhealth);
     }
-    
+
     void OnTriggerEnter(Collider other)
-    {   
-        enemyshootingmovement damage = other.GetComponent<enemyshootingmovement>();
-        if (other.gameObject.tag == "bullets" ) // check if collided object has the "bullets" tag and the enemyshootingmovement component
+    {
+        if (other.gameObject.CompareTag("enemy"))
         {
-            TakeDamage(damage.damage); // reduce health by the bullet's damage
-            Debug.Log(damage.damage);
+            // get the damage value from the enemy melee script
+            int damage = other.gameObject.GetComponent<enemymelee>().damage;
+            TakeDamage(damage);
+            Debug.Log("dieeeeee");
+        }
+        else if (other.gameObject.CompareTag("bullets"))
+        {
+            // get the damage value from the bullet script
+            int damage = other.gameObject.GetComponent<enemyshootingmovement>().damage;
+            TakeDamage(damage);
         }
     }
 
@@ -41,7 +48,15 @@ public class takehealth : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-        playerIsAlive=false;
+        playerIsAlive = false;
     }
+<<<<<<< HEAD
+=======
+
+    public void Updatehealth()
+    {
+        healthtext.text = health + "/" + maxhealth;
+    }
+>>>>>>> merge_chamber
 }
 

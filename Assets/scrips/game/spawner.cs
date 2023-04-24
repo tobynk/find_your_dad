@@ -38,7 +38,7 @@ public class spawner : MonoBehaviour
     {
         for(int i=0; i < enemiestospawn; i++)
         {
-            int index = Random.Range(0,EnemyPrefab.Count);
+            int index = Random.Range(0,4);
             Instantiate(EnemyPrefab[index],GenerateSpawnPosition(), Quaternion.identity);
         }
     }
