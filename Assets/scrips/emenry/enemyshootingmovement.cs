@@ -10,6 +10,7 @@ public class enemyshootingmovement : MonoBehaviour
     public int damage;
     public float timer=0;
     public float detoryshit=3;
+    public int playercount;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +21,18 @@ public class enemyshootingmovement : MonoBehaviour
     // Update is called once per frame
    void Update()
     {
-        timer += Time.deltaTime;
-        Vector3 direction = player.position - transform.position;
-        direction.Normalize();
-        transform.position += direction * speed * Time.deltaTime;
+        playercount=FindObjectsOfType<takehealth>().Length;
+        if (playercount==0)
+        {
+            transform.position += transform.forward * speed * Time.deltaTime;
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            Vector3 direction = player.position - transform.position;
+            direction.Normalize();
+            transform.position += direction * speed * Time.deltaTime;
+        }
         // if (Vector3.Distance(transform.position, player.position) < 0.5f)
         // {
         //     // destroy the object if it has collided with the player

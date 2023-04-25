@@ -23,7 +23,12 @@ public class EMSHOOTING : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) <= detectionRange)
+        playercount=FindObjectsOfType<takehealth>().Length;
+        if (playercount==0)
+        {
+
+        }
+        else if (Vector3.Distance(player.transform.position, transform.position) <= detectionRange)
         {
             timer += Time.deltaTime;
 

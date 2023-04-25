@@ -13,6 +13,8 @@ public class shootingmovements : MonoBehaviour
     public float maxDistance = 100.0f; // Maximum distance for seeking enemies
     public float straightBulletDistance = 20.0f; // Distance threshold for straight bullet
     public float destroyTime = 10f;
+    private int enenmycount;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class shootingmovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enenmycount=FindObjectsOfType<enermyhealth>().Length;
         FindClosestEnemy();
         Vector3 direction = enemy.position - transform.position;
         direction.Normalize();
@@ -48,16 +51,23 @@ public class shootingmovements : MonoBehaviour
     }
     void FindClosestEnemy()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, maxDistance, enemyLayer);
-        float closestDistance = Mathf.Infinity;
-
-        foreach (Collider collider in colliders)
+        if (enenmycount==0)
         {
-            float distance = Vector3.Distance(transform.position, collider.transform.position);
-            if (distance < closestDistance)
+
+        }
+        else
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, maxDistance, enemyLayer);
+            float closestDistance = Mathf.Infinity;
+
+            foreach (Collider collider in colliders)
             {
-                closestDistance = distance;
-                enemy = collider.transform;
+                float distance = Vector3.Distance(transform.position, collider.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    enemy = collider.transform;
+                }
             }
         }
     }
