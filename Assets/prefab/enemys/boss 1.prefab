@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 2404727580448389216}
   - component: {fileID: 8419214069290984062}
   - component: {fileID: 910332446}
+  - component: {fileID: 2238398332551644449}
   m_Layer: 6
   m_Name: boss 1
   m_TagString: enemy
@@ -209,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 5015204539905829092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.8, z: 18}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8564811403216701238}
@@ -348,9 +349,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxhealth: 100
+  maxhealth: 1000
   playerIsAlive: 1
   healthbarem: {fileID: 44610049007662567}
+--- !u!114 &2238398332551644449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9017df9a2a44a42ce88262dd99ec2374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+  teleportDistance: 10
+  teleportInterval: 10
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0

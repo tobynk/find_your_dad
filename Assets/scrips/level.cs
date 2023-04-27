@@ -54,4 +54,13 @@ public class level : MonoBehaviour
     {
         leveltext.text="lv."+levels;
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        // check if the collided object has a "Player" tag
+        if (collision.gameObject.CompareTag("exp"))
+        {
+            gainexp(100);
+            Debug.Log("you have gain"+"100"+levels);
+        }
+    }
 }

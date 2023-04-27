@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 1448958898596735951}
   - component: {fileID: 1448958898596735949}
   - component: {fileID: 191257147}
+  - component: {fileID: 4923498721991144799}
+  - component: {fileID: 191257148}
+  - component: {fileID: 191257156}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -101,7 +104,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1448958898596735951
 MonoBehaviour:
@@ -115,14 +118,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64fa231b25dd4dc68ae0874433a95a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   controller: {fileID: 191257147}
   turnsmoothtime: 0.1
-  turnsmoothvelocity: 10
+  turnsmoothvelocity: 20
   cam: {fileID: 0}
   jumpForce: 10
   gravityModifier: 1
   isOnGround: 1
+  speed: 14
+  jumpHeight: 3
+  timeToJumpApex: 0.4
 --- !u!65 &1448958898596735949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154,3 +159,52 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4923498721991144799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448958898596735957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe833b8d62f3497ea70fb013a6c367f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxhealth: 1000
+  playerIsAlive: 1
+  healthBar: {fileID: 0}
+  healthtext: {fileID: 0}
+--- !u!114 &191257148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448958898596735957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dce1a0af998d4bcba3f30da2a528f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingE: {fileID: 221724794820407334, guid: dbcacd7cacad54304a10d69620cbb61a, type: 3}
+--- !u!114 &191257156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448958898596735957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7149b1ed51f64408934af1843158342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels: 0
+  maxlevel: 100
+  minlevel: 0
+  exp: 0
+  staringexp: 500
+  requiredxp: 0
+  leveltext: {fileID: 0}

@@ -8,6 +8,9 @@ public class enermyhealth : MonoBehaviour
     public int maxhealth=100;
     public bool playerIsAlive = true;
     public healthbarem healthbarem;
+     public GameObject objectToDrop;
+    public Transform enemyPosition;
+    public int dropCount = 1;
 
     // Start is called before the first frame update
    void Start()
@@ -40,5 +43,17 @@ public class enermyhealth : MonoBehaviour
     {
         Destroy(gameObject);
         playerIsAlive=false;
+        DropObjects();
+    }
+    private void DropObjects()
+    {
+        if (objectToDrop != null && enemyPosition != null)
+        {
+            for (int i = 0; i < dropCount; i++)
+            {
+                Vector3 spawnPosition = enemyPosition.position + new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f));
+                Instantiate(objectToDrop, spawnPosition, Quaternion.identity);
+            }
+        }
     }
 }
