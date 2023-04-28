@@ -60,6 +60,7 @@ public class level : MonoBehaviour
         if (collision.gameObject.CompareTag("exp"))
         {
             gainexp(100);
+            Destroy(collision.gameObject);
             Debug.Log("you have gain"+"100"+levels);
         }
     }

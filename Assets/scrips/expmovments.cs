@@ -6,7 +6,7 @@ public class expmovments : MonoBehaviour
 {
     public float speed = 5f; // the speed at which the object will move towards the player
     public float detectionRadius = 5f; // the radius in which the object will detect the player
-    public float destroyRadius = 0.5f; // the radius at which the object will destroy itself upon hitting the player
+    public float destroyRadius = 0f; // the radius at which the object will destroy itself upon hitting the player
     private Transform player; // reference to the player's transform
     private bool isFollowing = false; // flag indicating whether the object is currently following the player
 
@@ -29,10 +29,10 @@ public class expmovments : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
             // check if the distance between the object and the player is within the destroy radius
-            if (Vector3.Distance(transform.position, player.position) < destroyRadius)
-            {
-                Destroy(gameObject);
-            }
+            // if (Vector3.Distance(transform.position, player.position) < destroyRadius)
+            // {
+            //     Destroy(gameObject);
+            // }
         }
     }
 }

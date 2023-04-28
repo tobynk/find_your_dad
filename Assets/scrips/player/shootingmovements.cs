@@ -22,33 +22,46 @@ public class shootingmovements : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+   void Update()
     {
-        enenmycount=FindObjectsOfType<enermyhealth>().Length;
-        FindClosestEnemy();
-        Vector3 direction = enemy.position - transform.position;
-        direction.Normalize();
+        enenmycount = FindObjectsOfType<enermyhealth>().Length;
 
-        if (Vector3.Distance(transform.position, enemy.position) > straightBulletDistance)
+        if (enenmycount > 0)
         {
-            // If the enemy is too far away, shoot in a straight line
-            transform.position += transform.forward * speed * Time.deltaTime;
-            Invoke("DestroyGameObject", destroyTime);
+            FindClosestEnemy();
+            if (enemy != null)
+            {
+                Vector3 direction = enemy.position - transform.position;
+                direction.Normalize();
+
+                if (Vector3.Distance(transform.position, enemy.position) > straightBulletDistance)
+                {
+                    // If the enemy is too far away, shoot in a straight line
+                    transform.position += transform.forward * speed * Time.deltaTime;
+                    Invoke("DestroyGameObject", destroyTime);
+                }
+                else
+                {
+                    // Otherwise, move towards the enemy
+                    transform.position += direction * speed * Time.deltaTime;
+                }
+
+                if (Vector3.Distance(transform.position, enemy.position) < 0.5f)
+                {
+                    // destroy the object if it has collided with the player
+                    Destroy(gameObject);
+                }
+            }
         }
         else
         {
-            // Otherwise, move towards the enemy
-            transform.position += direction * speed * Time.deltaTime;
+            // If there are no enemies, move the bullet in a straight line
+            transform.position += transform.forward * speed * Time.deltaTime;
+            Invoke("DestroyGameObject", destroyTime);
         }
+}
 
-        if (Vector3.Distance(transform.position, enemy.position) < 0.5f)
-        {
-            // destroy the object if it has collided with the player
-            Destroy(gameObject);
-        }
-        
-    }
+
     void FindClosestEnemy()
     {
         if (enenmycount==0)

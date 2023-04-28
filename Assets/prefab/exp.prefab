@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4839332999157551897}
   m_Layer: 0
   m_Name: exp
-  m_TagString: Untagged
+  m_TagString: exp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58255a4355d4a8288c7c7d76ee4461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 30
   detectionRadius: 10
   destroyRadius: 0.5
