@@ -10,12 +10,21 @@ public class takehealth : MonoBehaviour
     public bool playerIsAlive = true;
     public healthbar healthBar;
     public TextMeshProUGUI healthtext;
+    public level level;
+    public float expcount;
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxhealth; // initialize health to maximum value
         healthBar.SetMaxHealth(maxhealth);
+        level= GetComponent<level>();
+    }
+    void update()
+    {
+        maxhealth=level.levels*1000;
+        health=health+1;
+        expcount=FindObjectsOfType<expmovments>().Length;
     }
 
     void OnTriggerEnter(Collider other)

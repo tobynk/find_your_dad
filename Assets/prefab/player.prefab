@@ -176,6 +176,7 @@ MonoBehaviour:
   playerIsAlive: 1
   healthBar: {fileID: 0}
   healthtext: {fileID: 0}
+  level: {fileID: 0}
 --- !u!114 &191257148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7149b1ed51f64408934af1843158342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels: 0
+  levels: 1
   maxlevel: 100
   minlevel: 0
   exp: 0
