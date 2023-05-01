@@ -40,8 +40,9 @@ public class enermyhealth : MonoBehaviour
 
     void Die()
     {
+        Instantiate(objectToDrop);
         Destroy(gameObject);
         playerIsAlive=false;
-        Instantiate(objectToDrop);
+        
     }
 }

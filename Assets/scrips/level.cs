@@ -5,7 +5,7 @@ using TMPro;
 
 public class level : MonoBehaviour
 {
-    public int levels;
+    public int levels=1;
     public int maxlevel=100;
     public int minlevel=1;
     public int exp=0;

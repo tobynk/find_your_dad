@@ -6,7 +6,7 @@ using TMPro;
 public class takehealth : MonoBehaviour
 {
     public int health;
-    public int maxhealth = 1000;
+    public int maxhealth;
     public bool playerIsAlive = true;
     public healthbar healthBar;
     public TextMeshProUGUI healthtext;
@@ -20,10 +20,11 @@ public class takehealth : MonoBehaviour
         healthBar.SetMaxHealth(maxhealth);
         level= GetComponent<level>();
     }
-    void update()
+    void Update()
     {
+        level= GetComponent<level>();
         maxhealth=level.levels*1000;
-        health=health+1;
+        healthBar.SetMaxHealth(maxhealth);
         expcount=FindObjectsOfType<expmovments>().Length;
     }
 
