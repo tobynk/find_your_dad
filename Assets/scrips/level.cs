@@ -12,12 +12,17 @@ public class level : MonoBehaviour
     public int staringexp=500;
     public int requiredxp;
     public TextMeshProUGUI leveltext;
+    public takehealth health;
+    public int enenmycount;
     // Start is called before the first frame update
     void Start()
     {
+
         levels=minlevel;
         requiredxp=staringexp*levels;
         Updatlevl();
+        health= GetComponent<takehealth>();
+        health.addmoreheatlh();
         
     }
 
@@ -31,15 +36,22 @@ public class level : MonoBehaviour
             Debug.Log("level up");
             setexp(levels);
             exp=0;
+            health.addmoreheatlh();
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
             gainexp(100);
         }
+        enenmycount=FindObjectsOfType<enermyhealth>().Length;
+
+        if (enenmycount==0)
+        {
+            gainexp(requiredxp);
+        }
         
     }
 
-    void gainexp(int amount)
+    public void gainexp(int amount)
     {
         exp +=amount;
         Updatlevl();

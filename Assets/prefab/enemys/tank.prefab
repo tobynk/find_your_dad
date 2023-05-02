@@ -353,6 +353,7 @@ MonoBehaviour:
   healthbarem: {fileID: 44610049007662567}
   objectToDrop: {fileID: 3241988358159367636, guid: 6362ac883167c406b8cb2f74969c8082, type: 3}
   dropCount: 1
+  exp: 100
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0

@@ -1807,6 +1807,10 @@ MonoBehaviour:
   - {fileID: 5015204539905829092, guid: bb0cd65ce826e477b8907ce7b045dc40, type: 3}
   - {fileID: 5015204539905829092, guid: 6d3b082a96b594515987cecf4b2e730b, type: 3}
   - {fileID: 5015204539905829092, guid: 5ea56b705ea4143a290d0a9eb94c377c, type: 3}
+  bossPrefab:
+  - {fileID: 5015204539905829092, guid: f5c47fe0678ac654e9669cf34cc29621, type: 3}
+  - {fileID: 5015204539905829092, guid: 24415ba2cbf7c4a7cbb0a42b95fe3794, type: 3}
+  - {fileID: 5015204539905829092, guid: 0aee5da1c0b4d4f3fb155956c7c682dd, type: 3}
 --- !u!4 &2034701055
 Transform:
   m_ObjectHideFlags: 0
@@ -2056,10 +2060,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2044587975}
-    - target: {fileID: 4923498721991144799, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
-      propertyPath: maxhealth
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
 --- !u!1001 &9210984546118577011

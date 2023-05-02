@@ -172,11 +172,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxhealth: 1000
+  maxhealth: 0
   playerIsAlive: 1
   healthBar: {fileID: 0}
   healthtext: {fileID: 0}
   level: {fileID: 0}
+  expcount: 0
 --- !u!114 &191257148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,8 +205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels: 1
   maxlevel: 100
-  minlevel: 0
+  minlevel: 1
   exp: 0
   staringexp: 500
   requiredxp: 0
   leveltext: {fileID: 0}
+  health: {fileID: 0}

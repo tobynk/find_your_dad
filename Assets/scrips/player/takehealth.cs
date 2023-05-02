@@ -22,10 +22,15 @@ public class takehealth : MonoBehaviour
     }
     void Update()
     {
+        expcount=FindObjectsOfType<expmovments>().Length;
+    }
+    
+    public void addmoreheatlh()
+    {
         level= GetComponent<level>();
         maxhealth=level.levels*1000;
+        health=maxhealth;
         healthBar.SetMaxHealth(maxhealth);
-        expcount=FindObjectsOfType<expmovments>().Length;
     }
 
     void OnTriggerEnter(Collider other)

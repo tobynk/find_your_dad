@@ -8,6 +8,8 @@ public class spawner : MonoBehaviour
     public int enenmycount;
     public int wavenumber=1;
     public List<GameObject> EnemyPrefab;
+    public List<GameObject> bossPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,10 +38,19 @@ public class spawner : MonoBehaviour
     
     void SpawnEnemyWave(int enemiestospawn)
     {
-        for(int i=0; i < enemiestospawn; i++)
+        if (wavenumber==4)
+        {
+            Instantiate(bossPrefab[0],GenerateSpawnPosition(), Quaternion.identity);
+            Instantiate(bossPrefab[1],GenerateSpawnPosition(), Quaternion.identity);
+            Instantiate(bossPrefab[2],GenerateSpawnPosition(), Quaternion.identity);
+        }
+        else
+        {
+            for(int i=0; i < enemiestospawn; i++)
         {
             int index = Random.Range(0,3);
             Instantiate(EnemyPrefab[index],GenerateSpawnPosition(), Quaternion.identity);
+        }
         }
     }
 }

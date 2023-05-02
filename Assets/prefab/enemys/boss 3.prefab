@@ -193,8 +193,10 @@ GameObject:
   - component: {fileID: 2404727580448389216}
   - component: {fileID: 8419214069290984062}
   - component: {fileID: 910332446}
+  - component: {fileID: 2238398332551644449}
+  - component: {fileID: -7861744011484016244}
   m_Layer: 6
-  m_Name: range
+  m_Name: boss 3
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,8 +210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5015204539905829092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.08, z: 18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 3.8, z: 18}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8564811403216701238}
@@ -294,11 +296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6368d5233d4e849ea9a58f5d9b9b03cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2875088127937834428, guid: fb8c378360e9e4b3f8d49ea25f23b27f, type: 3}
+  projectilePrefab: {fileID: 2875088127937834428, guid: f5ab252e7509d42a8a6fedba78608c0c, type: 3}
   fireInterval: 20
   detectionRange: 30
   timer: 0
-  firingrate: 4
+  firingrate: 1
   distanceToPlayer: 0
   playercount: 0
 --- !u!136 &2404727580448389216
@@ -348,12 +350,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxhealth: 100
+  maxhealth: 1000
   playerIsAlive: 1
   healthbarem: {fileID: 44610049007662567}
   objectToDrop: {fileID: 3241988358159367636, guid: 6362ac883167c406b8cb2f74969c8082, type: 3}
   dropCount: 1
-  exp: 100
+--- !u!114 &2238398332551644449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9017df9a2a44a42ce88262dd99ec2374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+  teleportDistance: 10
+  teleportInterval: 10
+--- !u!114 &-7861744011484016244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbebf760ccefc478ba5cfb7a24f639ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 5015204539905829092, guid: 6d3b082a96b594515987cecf4b2e730b, type: 3}
+  spawnRadius: 5
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0

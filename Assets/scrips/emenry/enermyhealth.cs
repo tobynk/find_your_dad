@@ -23,7 +23,7 @@ public class enermyhealth : MonoBehaviour
     {
         if (other.gameObject.tag == "mainat") // check if collided object has the "Enemy" tag
         {
-            TakeDamage(10); // reduce health by 10 points
+            TakeDamage(100); // reduce health by 10 points
             Debug.Log("fuck u");
             healthbarem.SetHealth(health);
         }
