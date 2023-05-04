@@ -14,6 +14,7 @@ public class level : MonoBehaviour
     public TextMeshProUGUI leveltext;
     public takehealth health;
     public int enenmycount;
+    private int gainep;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +47,8 @@ public class level : MonoBehaviour
 
         if (enenmycount==0)
         {
-            gainexp(requiredxp);
+            gainep=requiredxp/2;
+            gainexp(gainep);
         }
         
     }

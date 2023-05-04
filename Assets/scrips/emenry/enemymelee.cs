@@ -12,7 +12,7 @@ public class enemymelee : MonoBehaviour
 
     private takehealth playerHealth;
     private Transform playerTransform;   // Reference to the player's transform
-    private float distanceThreshold = 2.0f;
+    private float distanceThreshold = 25.0f;
     private bool canAttack = true;
 
     void Start() {

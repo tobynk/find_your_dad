@@ -368,8 +368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
-  teleportDistance: 10
-  teleportInterval: 10
+  teleportDistance: 100
+  minTeleportInterval: 1
+  maxTeleportInterval: 10
 --- !u!114 &-730366924336437516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbebf760ccefc478ba5cfb7a24f639ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 5015204539905829092, guid: 6d3b082a96b594515987cecf4b2e730b, type: 3}
+  prefabToSpawn: {fileID: 5015204539905829092, guid: 842ed433ce1c84dbeaee0145db5e8643, type: 3}
   spawnRadius: 5
 --- !u!1 &6042104050174022353
 GameObject:

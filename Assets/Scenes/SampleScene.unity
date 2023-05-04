@@ -1805,7 +1805,7 @@ MonoBehaviour:
   wavenumber: 1
   EnemyPrefab:
   - {fileID: 5015204539905829092, guid: bb0cd65ce826e477b8907ce7b045dc40, type: 3}
-  - {fileID: 5015204539905829092, guid: 6d3b082a96b594515987cecf4b2e730b, type: 3}
+  - {fileID: 5015204539905829092, guid: 842ed433ce1c84dbeaee0145db5e8643, type: 3}
   - {fileID: 5015204539905829092, guid: 5ea56b705ea4143a290d0a9eb94c377c, type: 3}
   bossPrefab:
   - {fileID: 5015204539905829092, guid: f5c47fe0678ac654e9669cf34cc29621, type: 3}

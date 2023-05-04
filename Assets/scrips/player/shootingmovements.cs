@@ -14,6 +14,7 @@ public class shootingmovements : MonoBehaviour
     public float straightBulletDistance = 20.0f; // Distance threshold for straight bullet
     public float destroyTime = 10f;
     private int enenmycount;
+    public int damage=100;
     
 
     // Start is called before the first frame update
@@ -87,5 +88,13 @@ public class shootingmovements : MonoBehaviour
     void DestroyGameObject()
     {
         Destroy(gameObject);
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        enermyhealth enemyHealth = other.gameObject.GetComponent<enermyhealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.TakeDamage(damage);
+        }
     }
 }

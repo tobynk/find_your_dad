@@ -8,7 +8,7 @@ public class enermyhealth : MonoBehaviour
     public int maxhealth=100;
     public bool playerIsAlive = true;
     public healthbarem healthbarem;
-     public GameObject objectToDrop;
+    public GameObject objectToDrop;
     public int dropCount = 1;
 
     // Start is called before the first frame update
@@ -21,21 +21,17 @@ public class enermyhealth : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "mainat") // check if collided object has the "Enemy" tag
-        {
-            TakeDamage(100); // reduce health by 10 points
-            Debug.Log("fuck u");
-            healthbarem.SetHealth(health);
-        }
+        
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage; // subtract damage from current health
         if (health <= 0)
         {
             Die(); // if health reaches zero or below, call Die() function
         }
+        healthbarem.SetHealth(health);
     }
 
     void Die()
