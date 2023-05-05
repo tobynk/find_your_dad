@@ -15,12 +15,13 @@ public class shootingmovements : MonoBehaviour
     public float destroyTime = 10f;
     private int enenmycount;
     public int damage=100;
+    public level LevelScript;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        LevelScript = GameObject.FindObjectOfType<level>();
     }
 
    void Update()
@@ -94,7 +95,7 @@ public class shootingmovements : MonoBehaviour
         enermyhealth enemyHealth = other.gameObject.GetComponent<enermyhealth>();
         if (enemyHealth != null)
         {
-            enemyHealth.TakeDamage(damage);
+            enemyHealth.TakeDamage(damage * LevelScript.levels);
         }
     }
 }

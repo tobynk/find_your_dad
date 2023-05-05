@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class playershooting : MonoBehaviour
 {
-    public GameObject shootingE;
+    public GameObject shootingmain;
+    public KeyCode spawnKey = KeyCode.E; // The key to press to spawn the prefab
+    public GameObject prefabToSpawn; // The prefab to spawn
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +18,16 @@ public class playershooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButtonDown(0))
         {
             var offset = new Vector3(Mathf.Cos(transform.eulerAngles.y), 0.0f, Mathf.Sin(transform.eulerAngles.y));
-            Instantiate(shootingE, transform.position+ offset,transform.rotation);
+            Instantiate(shootingmain, transform.position+ offset,transform.rotation);
         }
-        
+       if (Input.GetKeyDown(spawnKey))
+        {
+          var eoffset = new Vector3(Mathf.Cos(transform.eulerAngles.y), 0.0f, Mathf.Sin(transform.eulerAngles.y)) * 5f;
+            Instantiate(prefabToSpawn, transform.position+ eoffset,transform.rotation);
+        }
     }
+
 }

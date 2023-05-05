@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2875088127937834431}
   m_Layer: 0
   m_Name: normal(boss!)
-  m_TagString: bullets
+  m_TagString: mainat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,3 +115,4 @@ MonoBehaviour:
   damage: 100
   timer: 0
   detoryshit: 3
+  playercount: 0

@@ -32,6 +32,7 @@ public class enermyhealth : MonoBehaviour
             Die(); // if health reaches zero or below, call Die() function
         }
         healthbarem.SetHealth(health);
+        Debug.Log(damage);
     }
 
     void Die()

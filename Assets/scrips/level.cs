@@ -75,7 +75,7 @@ public class level : MonoBehaviour
         {
             gainexp(100);
             Destroy(collision.gameObject);
-            Debug.Log("you have gain"+"100"+levels);
+            // Debug.Log("you have gain"+"100"+levels);
         }
     }
 }
