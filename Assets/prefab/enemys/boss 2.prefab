@@ -246,7 +246,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a8ddd10e06ac74ef0b899739976a6201, type: 2}
+  - {fileID: 2100000, guid: e767bb3d8eab94f9b8d14e538208bc50, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -355,7 +355,6 @@ MonoBehaviour:
   healthbarem: {fileID: 44610049007662567}
   objectToDrop: {fileID: 3241988358159367636, guid: 6362ac883167c406b8cb2f74969c8082, type: 3}
   dropCount: 1
-  damagetext: {fileID: 0}
 --- !u!114 &2238398332551644449
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,8 +7,11 @@ public class spawner : MonoBehaviour
     private float spawnRange =25.0f;
     public int enenmycount;
     public int wavenumber=1;
+    public int bossspawnwave=5;
+    public int bigbossspawnwave=10;
     public List<GameObject> EnemyPrefab;
     public List<GameObject> bossPrefab;
+    public GameObject bigbossPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +41,15 @@ public class spawner : MonoBehaviour
     
     void SpawnEnemyWave(int enemiestospawn)
     {
-        if (wavenumber==4)
+        if (wavenumber==bossspawnwave)
         {
             Instantiate(bossPrefab[0],GenerateSpawnPosition(), Quaternion.identity);
             Instantiate(bossPrefab[1],GenerateSpawnPosition(), Quaternion.identity);
             Instantiate(bossPrefab[2],GenerateSpawnPosition(), Quaternion.identity);
+        }
+        else if (wavenumber==bigbossspawnwave)
+        {
+            Instantiate(bigbossPrefab,GenerateSpawnPosition(), Quaternion.identity);
         }
         else
         {

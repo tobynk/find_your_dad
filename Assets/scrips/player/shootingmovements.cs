@@ -12,7 +12,7 @@ public class shootingmovements : MonoBehaviour
     public LayerMask enemyLayer; // LayerMask for enemies
     public float maxDistance = 100.0f; // Maximum distance for seeking enemies
     public float straightBulletDistance = 20.0f; // Distance threshold for straight bullet
-    public float destroyTime = 10f;
+    public float destroyTime = 1f;
     private int enenmycount;
     public int damage=100;
     public level LevelScript;
@@ -95,7 +95,14 @@ public class shootingmovements : MonoBehaviour
         enermyhealth enemyHealth = other.gameObject.GetComponent<enermyhealth>();
         if (enemyHealth != null)
         {
-            enemyHealth.TakeDamage(damage * LevelScript.levels);
+            enemyHealth.TakeDamage(damagecaluation());
         }
     }
+
+    int damagecaluation()
+    {
+        int damages=damage*LevelScript.levels;
+        return damages;
+    }
+
 }
