@@ -118,5 +118,5 @@ MonoBehaviour:
   maxDistance: 100
   straightBulletDistance: 20
   destroyTime: 10
-  damage: 25
+  damage: 1000
   LevelScript: {fileID: 0}

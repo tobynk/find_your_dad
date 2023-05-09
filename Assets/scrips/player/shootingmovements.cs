@@ -92,10 +92,21 @@ public class shootingmovements : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        enermyhealth enemyHealth = other.gameObject.GetComponent<enermyhealth>();
-        if (enemyHealth != null)
+        if (other.CompareTag("enemy"))
         {
-            enemyHealth.TakeDamage(damagecaluation());
+            enermyhealth enemyHealth = other.gameObject.GetComponent<enermyhealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damagecaluation());
+            }
+        }
+        else if (other.CompareTag("bigboss"))
+        {
+            bosshealth bossHealth = other.gameObject.GetComponent<bosshealth>();
+            if (bossHealth != null)
+            {
+                bossHealth.TakeDamage(damagecaluation());
+            }
         }
     }
 

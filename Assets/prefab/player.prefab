@@ -190,7 +190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dce1a0af998d4bcba3f30da2a528f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingE: {fileID: 221724794820407334, guid: dbcacd7cacad54304a10d69620cbb61a, type: 3}
+  shootingmain: {fileID: 221724794820407334, guid: dbcacd7cacad54304a10d69620cbb61a, type: 3}
+  spawnKey: 101
+  prefabToSpawn: {fileID: 3758362483528536705, guid: 9f06c785f53cf44fd95cc31af85fd9df, type: 3}
 --- !u!114 &191257156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,3 +213,4 @@ MonoBehaviour:
   requiredxp: 0
   leveltext: {fileID: 0}
   health: {fileID: 0}
+  enenmycount: 0

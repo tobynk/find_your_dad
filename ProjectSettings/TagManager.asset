@@ -12,6 +12,7 @@ TagManager:
   - enemy
   - mainat
   - exp
+  - bigboss
   layers:
   - Default
   - TransparentFX
