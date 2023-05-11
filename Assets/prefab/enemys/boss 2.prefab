@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 910332446}
   - component: {fileID: 2238398332551644449}
   - component: {fileID: 7116439988539209934}
+  - component: {fileID: -9122902672594936275}
   m_Layer: 6
   m_Name: boss 2
   m_TagString: enemy
@@ -385,6 +386,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 5015204539905829092, guid: 842ed433ce1c84dbeaee0145db5e8643, type: 3}
   spawnRadius: 5
+--- !u!114 &-9122902672594936275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150687c38ef18407eb8611b890e63778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0

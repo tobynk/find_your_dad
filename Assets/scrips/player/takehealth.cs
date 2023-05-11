@@ -11,7 +11,7 @@ public class takehealth : MonoBehaviour
     public healthbar healthBar;
     public TextMeshProUGUI healthtext;
     public level level;
-    public float expcount;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class takehealth : MonoBehaviour
     }
     void Update()
     {
-        expcount=FindObjectsOfType<expmovments>().Length;
+        
     }
     
     public void addmoreheatlh()

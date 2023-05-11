@@ -12,11 +12,15 @@ public class spawner : MonoBehaviour
     public List<GameObject> EnemyPrefab;
     public List<GameObject> bossPrefab;
     public GameObject bigbossPrefab;
+    public bool bossbattle=false;
+    public level level;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         SpawnEnemyWave(wavenumber);
+        level= FindObjectOfType<level>();
     }
 
     // Update is called once per frame
@@ -24,10 +28,11 @@ public class spawner : MonoBehaviour
     {
         enenmycount=FindObjectsOfType<enermyhealth>().Length;
 
-        if (enenmycount==0)
+        if (enenmycount==0 && bossbattle == false)
         {
             wavenumber++;
             SpawnEnemyWave(wavenumber);
+            level.roundup();
         }
     }
     
@@ -41,15 +46,17 @@ public class spawner : MonoBehaviour
     
     void SpawnEnemyWave(int enemiestospawn)
     {
-        if (wavenumber==bossspawnwave)
+        if (wavenumber == bossspawnwave)
         {
-            Instantiate(bossPrefab[0],GenerateSpawnPosition(), Quaternion.identity);
-            Instantiate(bossPrefab[1],GenerateSpawnPosition(), Quaternion.identity);
-            Instantiate(bossPrefab[2],GenerateSpawnPosition(), Quaternion.identity);
+            Instantiate(bossPrefab[0], GenerateSpawnPosition(), Quaternion.identity);
+            Instantiate(bossPrefab[1], GenerateSpawnPosition(), Quaternion.identity);
+            Instantiate(bossPrefab[2], GenerateSpawnPosition(), Quaternion.identity);
         }
+
         else if (wavenumber==bigbossspawnwave)
         {
             Instantiate(bigbossPrefab,GenerateSpawnPosition(), Quaternion.identity);
+            bossbattle=true;
         }
         else
         {

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2238398332551644449}
   - component: {fileID: 1731362945742147789}
   - component: {fileID: 294218431082878998}
+  - component: {fileID: -3721411276681589612}
   m_Layer: 6
   m_Name: 'final boss '
   m_TagString: bigboss
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2875088127937834428, guid: f5ab252e7509d42a8a6fedba78608c0c, type: 3}
   fireInterval: 20
-  detectionRange: 30
+  detectionRange: 3000
   timer: 0
   firingrate: 1
   distanceToPlayer: 0
@@ -210,3 +211,16 @@ MonoBehaviour:
   dropCount: 1
   healthbarsetactive: {fileID: 0}
   bosshealthbars: {fileID: 0}
+  sethealthbar: {fileID: 0}
+--- !u!114 &-3721411276681589612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150687c38ef18407eb8611b890e63778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

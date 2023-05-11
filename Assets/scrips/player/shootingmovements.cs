@@ -16,6 +16,7 @@ public class shootingmovements : MonoBehaviour
     private int enenmycount;
     public int damage=100;
     public level LevelScript;
+
     
 
     // Start is called before the first frame update
@@ -26,7 +27,8 @@ public class shootingmovements : MonoBehaviour
 
    void Update()
     {
-        enenmycount = FindObjectsOfType<enermyhealth>().Length;
+        enenmycount = FindObjectsOfType<enemytag>().Length;
+        
 
         if (enenmycount > 0)
         {
@@ -55,13 +57,15 @@ public class shootingmovements : MonoBehaviour
                 }
             }
         }
+        
+        
         else
         {
             // If there are no enemies, move the bullet in a straight line
             transform.position += transform.forward * speed * Time.deltaTime;
             Invoke("DestroyGameObject", destroyTime);
         }
-}
+    }
 
 
     void FindClosestEnemy()

@@ -30,8 +30,9 @@ public class level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Updatlevl();
         requiredxp=staringexp*levels;
-        if (exp>requiredxp)
+        if (exp>=requiredxp)
         {
             levels++;
             Debug.Log("level up");
@@ -41,16 +42,16 @@ public class level : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
-            gainexp(100);
+            gainexp(10000);
         }
-        enenmycount=FindObjectsOfType<enermyhealth>().Length;
 
-        if (enenmycount==0)
-        {
-            gainep=requiredxp/2;
-            gainexp(gainep);
-        }
+
         
+    }
+    public void roundup()
+    {
+        gainep=requiredxp/2;
+        gainexp(gainep);
     }
 
     public void gainexp(int amount)
