@@ -13,27 +13,16 @@ public class playermovemnet : MonoBehaviour
     public Transform cam;
     private Rigidbody playerRb;
     public float jumpForce = 10;
-    public float gravityModifier;
     public bool isOnGround = true;
     private float tragetAngle;
     private float angle;
     public float speed = 10;
 
-    // Jump variables
-    public float jumpHeight = 3f;
-    public float timeToJumpApex = 0.4f;
-    private float jumpVelocity;
-
     // Update is called once per frame
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityModifier;
         Cursor.lockState = CursorLockMode.Locked;
-
-        // Calculate jump velocity
-        float gravity = Physics.gravity.y;
-        jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
     }
 
     void Update()
@@ -57,23 +46,7 @@ public class playermovemnet : MonoBehaviour
             controller.Move(Vector3.zero);
         }
 
-        // Check for jump input and apply force to player
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
-        {
-            // Calculate jump force based on desired height
-            float jumpForce = Mathf.Sqrt(2f * jumpHeight * Mathf.Abs(Physics.gravity.y));
-            playerRb.velocity = Vector3.up * jumpForce;
-
-            isOnGround = false;
-        }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("floor"))
-        {
-            isOnGround = true;
-        }
-    }
 }
 

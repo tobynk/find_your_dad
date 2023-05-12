@@ -33,11 +33,17 @@ public class enemyshootingmovement : MonoBehaviour
             direction.Normalize();
             transform.position += direction * speed * Time.deltaTime;
         }
-        // if (Vector3.Distance(transform.position, player.position) < 0.5f)
-        // {
-        //     // destroy the object if it has collided with the player
-        //     Destroy(gameObject);
-        // }
         
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            takehealth playerHealth = other.gameObject.GetComponent<takehealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
+        }
     }
 }

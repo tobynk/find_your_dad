@@ -33,23 +33,25 @@ public class takehealth : MonoBehaviour
         healthBar.SetMaxHealth(maxhealth);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("enemy"))
-        {
-            // get the damage value from the enemy melee script
-            int damage = other.gameObject.GetComponent<enemymelee>().damage;
-            TakeDamage(damage);
-            Debug.Log("dieeeeee");
-        }
-        else if (other.gameObject.CompareTag("bullets"))
-        {
-            // get the damage value from the bullet script
-            int damage = other.gameObject.GetComponent<enemyshootingmovement>().damage;
-            TakeDamage(damage);
-            Destroy(other.gameObject);
-        }
-    }
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.gameObject.CompareTag("enemy"))
+    //     {
+    //         // get the damage value from the enemy melee script
+    //         int damage = other.gameObject.GetComponent<enemymelee>().damage;
+    //         TakeDamage(damage);
+    //         Debug.Log("dieeeeee");
+    //     }
+    //     else if (other.gameObject.CompareTag("bullets"))
+    //     {
+    //         // get the damage value from the bullet script
+    //         int damage = other.gameObject.GetComponent<enemyshootingmovement>().damage;
+    //         TakeDamage(damage);
+    //         Debug.Log("you are taking"+damage);
+    //         Destroy(other.gameObject);
+    //     }
+    // } 
+
 
     public void TakeDamage(int damage)
     {
