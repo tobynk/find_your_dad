@@ -42,7 +42,7 @@ public class level : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
-            gainexp(10000);
+            gainexp(100000000);
         }
 
 
