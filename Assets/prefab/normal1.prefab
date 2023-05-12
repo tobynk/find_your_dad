@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   detectionRange: 1
-  damage: 30
+  damage: 50000
   timer: 0
   detoryshit: 3
   playercount: 0

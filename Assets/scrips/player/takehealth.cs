@@ -47,6 +47,7 @@ public class takehealth : MonoBehaviour
             // get the damage value from the bullet script
             int damage = other.gameObject.GetComponent<enemyshootingmovement>().damage;
             TakeDamage(damage);
+            Destroy(other.gameObject);
         }
     }
 

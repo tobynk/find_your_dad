@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxhealth: 1000000
+  maxhealth: 8000000
   playerIsAlive: 1
   dropCount: 1
   healthbarsetactive: {fileID: 0}
