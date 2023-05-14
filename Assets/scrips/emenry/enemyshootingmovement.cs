@@ -9,7 +9,7 @@ public class enemyshootingmovement : MonoBehaviour
     public float detectionRange = 1f;
     public int damage;
     public float timer=0;
-    public float detoryshit=3;
+    public float detoryshit=2;
     public int playercount;
     // Start is called before the first frame update
     void Start()
@@ -43,7 +43,10 @@ public class enemyshootingmovement : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
+                Debug.Log("damgae"+damage);
+                Destroy(gameObject);
             }
         }
     }
 }
+

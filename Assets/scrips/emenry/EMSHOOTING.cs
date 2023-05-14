@@ -37,6 +37,7 @@ public class EMSHOOTING : MonoBehaviour
             {
                 // fire projectile and update lastFireTime
                 Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+                Debug.Log("fire");
                 timer = 0;
             }
 

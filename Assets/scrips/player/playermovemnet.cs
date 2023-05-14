@@ -4,6 +4,7 @@ using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
 
 public class playermovemnet : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class playermovemnet : MonoBehaviour
     public float turnsmoothtime = 0.1f;
     public float turnsmoothvelocity;
     public Transform cam;
-    private Rigidbody playerRb;
-    public float jumpForce = 10;
     public bool isOnGround = true;
     private float tragetAngle;
     private float angle;
@@ -21,12 +20,12 @@ public class playermovemnet : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        playerRb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
+        controller.SimpleMove(Vector3.down * 9.8f); // apply gravity
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -45,8 +44,8 @@ public class playermovemnet : MonoBehaviour
             // If there is no input, don't move the character
             controller.Move(Vector3.zero);
         }
-
     }
+
 
 }
 

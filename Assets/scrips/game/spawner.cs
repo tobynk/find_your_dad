@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
-    private float spawnRange =25.0f;
+    private float spawnRange =10.0f;
     public int enenmycount;
     public int wavenumber=1;
     public int bossspawnwave=5;

@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2875088127937834428, guid: f5ab252e7509d42a8a6fedba78608c0c, type: 3}
   fireInterval: 20
-  detectionRange: 30
+  detectionRange: 300
   timer: 0
   firingrate: 1
   distanceToPlayer: 0
@@ -354,7 +354,6 @@ MonoBehaviour:
   maxhealth: 1000
   playerIsAlive: 1
   healthbarem: {fileID: 44610049007662567}
-  objectToDrop: {fileID: 3241988358159367636, guid: 6362ac883167c406b8cb2f74969c8082, type: 3}
   dropCount: 1
 --- !u!114 &2238398332551644449
 MonoBehaviour:
