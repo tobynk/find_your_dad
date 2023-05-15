@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2875088127937834401}
   - component: {fileID: 2875088127937834430}
   - component: {fileID: 2875088127937834431}
+  - component: {fileID: 7398558140120811755}
   m_Layer: 0
   m_Name: normal1
   m_TagString: bullets
@@ -105,9 +106,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2875088127937834428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f2fb9ee3a6dc401fb17943310907005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  detectionRange: 1
+  damage: 50000
+  timer: 0
+  detoryshit: 3
+  playercount: 0
+--- !u!114 &7398558140120811755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875088127937834428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b1b665bedc9434b9f63f2e111c0c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
