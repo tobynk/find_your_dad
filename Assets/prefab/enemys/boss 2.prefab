@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6368d5233d4e849ea9a58f5d9b9b03cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2875088127937834428, guid: f5ab252e7509d42a8a6fedba78608c0c, type: 3}
+  projectilePrefab: {fileID: 2875088127937834428, guid: c16de4ad198e743439f14f4d9ccd38bb, type: 3}
   fireInterval: 20
   detectionRange: 300
   timer: 0

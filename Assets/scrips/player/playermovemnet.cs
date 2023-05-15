@@ -18,10 +18,12 @@ public class playermovemnet : MonoBehaviour
     private float turnSmoothVelocity;
     public bool isDashing = false;
     public bool isRunning = false;
+    private stama energy;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        energy= GetComponent<stama>();
     }
 
     void Update()
@@ -41,12 +43,13 @@ public class playermovemnet : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
             // Check for dash input
-            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetMouseButton(1)) && isRunning)
+            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetMouseButton(1)) && isRunning&&energy.stamina>10)
             {
                 if (!isDashing)
                 {
                     isDashing = true;
                     StartCoroutine(DashCoroutine(moveDir));
+                    energy.UseStamina(10);
                 }
             }
             else

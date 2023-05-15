@@ -11,6 +11,7 @@ public class enemyshootingmovement : MonoBehaviour
     public float timer=0;
     public float detoryshit=2;
     public int playercount;
+    private bool diddamge=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +41,12 @@ public class enemyshootingmovement : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             takehealth playerHealth = other.gameObject.GetComponent<takehealth>();
-            if (playerHealth != null)
+            if (playerHealth != null&& diddamge==false)
             {
                 playerHealth.TakeDamage(damage);
                 Debug.Log("damgae"+damage);
                 Destroy(gameObject);
+                diddamge=true;
             }
         }
     }
