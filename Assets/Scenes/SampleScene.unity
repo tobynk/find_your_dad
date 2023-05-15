@@ -1568,7 +1568,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706148289}
-  m_LocalRotation: {x: 0.081736125, y: -0.7023669, z: 0.08173613, w: 0.7023668}
+  m_LocalRotation: {x: 0.081736125, y: -0.70236695, z: 0.08173613, w: 0.70236677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1654,7 +1654,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720217049}
-  m_LocalRotation: {x: 0.081736125, y: -0.7023669, z: 0.08173612, w: 0.7023668}
+  m_LocalRotation: {x: 0.081736125, y: -0.70236707, z: 0.08173614, w: 0.70236677}
   m_LocalPosition: {x: 6.9999995, y: 3, z: -5.7799993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2627,6 +2627,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1720217052}
+    - target: {fileID: 1448958898596735951, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+      propertyPath: runSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448958898596735951, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+      propertyPath: dashSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1448958898596735951, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
       propertyPath: m_Enabled
       value: 1
