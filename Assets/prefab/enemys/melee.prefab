@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  stoppingDistance: 0
+  stoppingDistance: 2
   damage: 100
   rechargeTime: 1
   speed: 20

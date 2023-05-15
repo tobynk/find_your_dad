@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 8419214069290984062}
   - component: {fileID: 910332446}
   - component: {fileID: -1528990672640364251}
+  - component: {fileID: 1717232795615786009}
   m_Layer: 6
   m_Name: tank
   m_TagString: enemy
@@ -290,7 +291,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5015204539905829092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6368d5233d4e849ea9a58f5d9b9b03cb, type: 3}
   m_Name: 
@@ -365,6 +366,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150687c38ef18407eb8611b890e63778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1717232795615786009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade8adf5cc8f9dd469d86f1dd7af9d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
+  bulletPrefab: {fileID: 2875088127937834428, guid: fb8c378360e9e4b3f8d49ea25f23b27f, type: 3}
+  shootingCooldown: 1
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0

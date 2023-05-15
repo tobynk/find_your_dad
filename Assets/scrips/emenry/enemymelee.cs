@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemymelee : MonoBehaviour
 {
     public float movementSpeed = 5f;    // Speed at which the enemy moves towards the player
-    public float stoppingDistance = 0f; // Distance at which the enemy stops moving towards the player
+    public float stoppingDistance = 5f; // Distance at which the enemy stops moving towards the player
     public int damage=100;
     public float rechargeTime = 1.0f;
     public float speed = 1.0f;

@@ -21,19 +21,19 @@ public class enemyshootingmovement : MonoBehaviour
     // Update is called once per frame
    void Update()
     {
-        playercount=FindObjectsOfType<takehealth>().Length;
-        if (playercount==0)
-        {
-            transform.position += transform.forward * speed * Time.deltaTime;
-        }
-        else
-        {
-            timer += Time.deltaTime;
-            Vector3 direction = player.position - transform.position;
-            direction.Normalize();
-            transform.position += direction * speed * Time.deltaTime;
-        }
-        
+        // playercount=FindObjectsOfType<takehealth>().Length;
+        // if (playercount==0)
+        // {
+        //     transform.position += transform.forward * speed * Time.deltaTime;
+        // }
+        // else
+        // {
+        //     timer += Time.deltaTime;
+        //     Vector3 direction = player.position - transform.position;
+        //     direction.Normalize();
+        //     transform.position += direction * speed * Time.deltaTime;
+        // }
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
     void OnTriggerEnter(Collider other)
     {
