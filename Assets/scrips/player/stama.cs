@@ -7,9 +7,17 @@ public class stama : MonoBehaviour
     public float stamina = 100.0f;
     public float staminaAdd = 1f;
     public float maxStamina = 100.0f;
+    public stama_bar stamabar;
+
+    void Start()
+    {
+        stamabar = GameObject.FindObjectOfType<stama_bar>();
+        stamabar.SetMaxstama(maxStamina);
+    }
 
     void Update()
     {
+        stamabar.Setstama(stamina);
         if (stamina < maxStamina)
         {
             stamina += staminaAdd * Time.deltaTime;
