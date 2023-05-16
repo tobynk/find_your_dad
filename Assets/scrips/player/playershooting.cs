@@ -7,6 +7,8 @@ public class playershooting : MonoBehaviour
     public GameObject shootingmain;
     public KeyCode spawnKey = KeyCode.E; // The key to press to spawn the prefab
     public GameObject prefabToSpawn; // The prefab to spawn
+    public KeyCode spawnQkey = KeyCode.Q; 
+    public bool powerup=false;
     
 
     // Start is called before the first frame update
@@ -27,6 +29,10 @@ public class playershooting : MonoBehaviour
         {
           var eoffset = new Vector3(Mathf.Cos(transform.eulerAngles.y), 0.0f, Mathf.Sin(transform.eulerAngles.y)) * 5f;
             Instantiate(prefabToSpawn, transform.position+ eoffset,transform.rotation);
+        }
+        if (Input.GetKeyDown(spawnQkey))
+        {
+          powerup=true;
         }
     }
 
