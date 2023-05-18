@@ -12,11 +12,13 @@ public class enemyshootingmovement : MonoBehaviour
     public float detoryshit=2;
     public int playercount;
     private bool diddamge=false;
+    private enermyhealth healthsceript;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         Destroy(gameObject,detoryshit);
+        healthsceript = GameObject.FindObjectOfType<enermyhealth>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class enemyshootingmovement : MonoBehaviour
                 Debug.Log("damgae"+damage);
                 Destroy(gameObject);
                 diddamge=true;
+                healthsceript.updatehealthbar();
             }
         }
     }

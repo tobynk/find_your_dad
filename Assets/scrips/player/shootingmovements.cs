@@ -16,13 +16,14 @@ public class shootingmovements : MonoBehaviour
     private int enenmycount;
     public int damage=100;
     public level LevelScript;
-
+    public playershooting powerupScript;
     
 
     // Start is called before the first frame update
     void Start()
     {
         LevelScript = GameObject.FindObjectOfType<level>();
+        powerupScript = GameObject.FindObjectOfType<playershooting>();
     }
 
    void Update()
@@ -99,25 +100,29 @@ public class shootingmovements : MonoBehaviour
         if (other.CompareTag("enemy"))
         {
             enermyhealth enemyHealth = other.gameObject.GetComponent<enermyhealth>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(damagecaluation());
-            }
+            enemyHealth.TakeDamage(damagecaluation());
         }
         else if (other.CompareTag("bigboss"))
         {
             bosshealth bossHealth = other.gameObject.GetComponent<bosshealth>();
-            if (bossHealth != null)
-            {
-                bossHealth.TakeDamage(damagecaluation());
-            }
+            bossHealth.TakeDamage(damagecaluation());
+
         }
     }
 
     int damagecaluation()
     {
-        int damages=damage*LevelScript.levels;
-        return damages;
+        if(powerupScript.powerup==true)
+        {
+            int damages=damage*LevelScript.levels*powerupScript.power;
+            return damages;
+        }
+        else
+        {
+            int damages=damage*LevelScript.levels;
+            return damages;
+        }
+
     }
 
 }

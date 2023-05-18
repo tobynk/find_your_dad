@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 910332446}
   - component: {fileID: -6531770438279646539}
   - component: {fileID: 6027410028968118516}
+  - component: {fileID: -8817320551162582753}
   m_Layer: 6
   m_Name: range
   m_TagString: enemy
@@ -350,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxhealth: 100
+  maxhealth: 25
   playerIsAlive: 1
   healthbarem: {fileID: 44610049007662567}
   dropCount: 1
@@ -381,6 +382,21 @@ MonoBehaviour:
   player: {fileID: 1448958898596735950, guid: f0a18f22c756945109c52e4fb669e73d, type: 3}
   bulletPrefab: {fileID: 2875088127937834428, guid: fb8c378360e9e4b3f8d49ea25f23b27f, type: 3}
   shootingCooldown: 1
+--- !u!114 &-8817320551162582753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadbbb5dd3f7e43fd98ae19471f77d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels: 1
+  minlevel: 1
+  spawerScript: {fileID: 0}
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0

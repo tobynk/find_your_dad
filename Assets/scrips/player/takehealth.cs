@@ -12,7 +12,6 @@ public class takehealth : MonoBehaviour
     public TextMeshProUGUI healthtext;
     public level level;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,8 @@ public class takehealth : MonoBehaviour
     }
     void Update()
     {
-        
+
+
     }
     
     public void addmoreheatlh()

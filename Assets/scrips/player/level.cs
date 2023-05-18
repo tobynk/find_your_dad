@@ -50,7 +50,7 @@ public class level : MonoBehaviour
     }
     public void roundup()
     {
-        gainep=requiredxp/2;
+        gainep=requiredxp;
         gainexp(gainep);
     }
 
