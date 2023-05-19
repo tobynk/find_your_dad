@@ -80,7 +80,7 @@ public class playermovemnet : MonoBehaviour
         float dashTimer = 0f;
         while (dashTimer < dashDuration)
         {
-            dashTimer += Time.deltaTime = 0.0f;
+            dashTimer += Time.deltaTime + 0.0f;
             controller.Move(dashDirection.normalized * dashSpeed * Time.deltaTime);
             yield return null;
         }
