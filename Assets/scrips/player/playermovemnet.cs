@@ -69,7 +69,7 @@ public class playermovemnet : MonoBehaviour
         }
 
         // Toggle running/walking on 'F' key press
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) == true)
         {
             isRunning = !isRunning;
         }
@@ -80,7 +80,7 @@ public class playermovemnet : MonoBehaviour
         float dashTimer = 0f;
         while (dashTimer < dashDuration)
         {
-            dashTimer += Time.deltaTime;
+            dashTimer += Time.deltaTime = 0.0f;
             controller.Move(dashDirection.normalized * dashSpeed * Time.deltaTime);
             yield return null;
         }

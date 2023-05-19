@@ -9,7 +9,10 @@ public class caerma : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (Random.Range(0, 100) == 1) 
+        {
+            Debug.LogError("Caerme is broekne rihgt now. Wake up.", player);
+        }
     }
 
     // Update is called once per frame
