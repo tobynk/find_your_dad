@@ -23,7 +23,6 @@ public class stama : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
         stamabar.Setstama(stamina);
         if (stamina < maxStamina)
         {
@@ -33,6 +32,10 @@ public class stama : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             UseStamina(10);
+        }
+        if (stamina==maxStamina)
+        {
+            timer += Time.deltaTime;
         }
         if (timer>=todeactive)
         {

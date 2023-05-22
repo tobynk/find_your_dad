@@ -9,17 +9,12 @@ public class enermyhealth : MonoBehaviour
     public bool playerIsAlive = true;
     public healthbarem healthbarem;
     public int dropCount = 1;
-    private level LevelScript;
-    private int healthround;
 
     // Start is called before the first frame update
    void Start()
     {
-        LevelScript = GameObject.FindObjectOfType<level>();
-        healthround=maxhealth*LevelScript.levels;
-        health = healthround; // initialize health to maximum value
+        health = maxhealth; // initialize health to maximum value
         healthbarem.SetMaxHealth(maxhealth);
-        Debug.Log("health"+health+"level"+LevelScript.levels);
         
     }
     void Update()
