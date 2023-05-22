@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxhealth: 100000
+  maxhealth: 10000
   playerIsAlive: 1
   healthbarem: {fileID: 44610049007662567}
   dropCount: 1

@@ -186,16 +186,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5015204539905829088}
-  - component: {fileID: 5015204539905829089}
   - component: {fileID: 5015204539905829094}
   - component: {fileID: 1733457310}
   - component: {fileID: -5675498777219163736}
-  - component: {fileID: 2404727580448389216}
   - component: {fileID: 8419214069290984062}
   - component: {fileID: 910332446}
   - component: {fileID: -1528990672640364251}
   - component: {fileID: 1717232795615786009}
   - component: {fileID: 3814467954069571174}
+  - component: {fileID: 5396415770742499848}
   m_Layer: 6
   m_Name: tank
   m_TagString: enemy
@@ -216,17 +215,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8564811403216701238}
+  - {fileID: 5901900275384649337}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5015204539905829089
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5015204539905829092}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5015204539905829094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -304,20 +296,6 @@ MonoBehaviour:
   firingrate: 4
   distanceToPlayer: 0
   playercount: 0
---- !u!136 &2404727580448389216
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5015204539905829092}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &8419214069290984062
 Animator:
   serializedVersion: 4
@@ -397,6 +375,19 @@ MonoBehaviour:
   levels: 1
   minlevel: 1
   spawerScript: {fileID: 0}
+--- !u!65 &5396415770742499848
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015204539905829092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5891899, y: 1.5754886, z: 2.706499}
+  m_Center: {x: 0.04438345, y: -0.2877444, z: 0.26731205}
 --- !u!1 &6042104050174022353
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,3 +531,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emslider: {fileID: 4232376403918317665}
+--- !u!1001 &6227768526689034642
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5015204539905829088}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+      propertyPath: m_Name
+      value: Tank Monkey
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+--- !u!4 &5901900275384649337 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c72660afe6bc04044ad180f112e910b2, type: 3}
+  m_PrefabInstance: {fileID: 6227768526689034642}
+  m_PrefabAsset: {fileID: 0}
